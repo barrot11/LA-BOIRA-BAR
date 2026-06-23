@@ -1,0 +1,6 @@
+{
+  "name": "La Boria Bar - Lleida",
+  "description": "Pàgina web oficial de La Boria Bar a Lleida. Esmorzars de qualitat, pinxos del dissabte, coca de recapte, cafè d'especialitat i cuina de mercat.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@theme {
+  --color-boria-blue: #1B3F8B;
+  --color-boria-blue-dark: #0F2560;
+  --color-boria-blue-mid: #2E5AC8;
+  --color-boria-blue-light: #D6E4FF;
+  --color-boria-sky: #EEF4FF;
+  --color-boria-white: #FFFFFF;
+  --color-boria-cream: #F8FAFF;
+  --color-boria-gray: #6B7A99;
+  --color-boria-gold: #C8A84B;
+
+  --font-display: "Playfair Display", serif;
+  --font-body: "Inter", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-boria-cream);
+  color: var(--color-boria-gray);
+  overflow-x: hidden;
+}
+
+/* Animations for Intersection Observer */
+.fade-in-element {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fade-in-element.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger animations */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }
+
+/* Custom keyframes for ping or heartbeat map points */
+@keyframes boria-ping {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+
+.animate-pulse-gold {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: .7;
+    transform: scale(1.05);
+  }
+}
